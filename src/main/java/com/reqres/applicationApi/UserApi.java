@@ -11,4 +11,8 @@ public final class UserApi {
 	public static Response post(Users requestUsers) {
 		return RestResource.post(requestUsers, Route.USERS);
 	}
+	
+	public static Response get(int pageNo) {
+		return RestResource.get(Route.TRANSACTIONS, pageNo);
+	}
 }

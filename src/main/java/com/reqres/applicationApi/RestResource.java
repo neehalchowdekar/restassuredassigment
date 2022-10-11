@@ -19,7 +19,19 @@ public final class RestResource {
 				.spec(SpecBuilder.getResponseSpec())
 				.extract()
 				.response();
-
 	}
+	
+	public static Response get(String path, int pageNo) {
+		return given(SpecBuilder.getRequestSpec())
+				.when()
+				.queryParam("page", pageNo)
+				.get(path)
+				.then()
+				.spec(SpecBuilder.getResponseSpec())
+				.extract()
+				.response();
+	}
+	
+	
 
 }

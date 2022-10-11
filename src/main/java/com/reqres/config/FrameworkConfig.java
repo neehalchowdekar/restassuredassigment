@@ -15,4 +15,10 @@ public interface FrameworkConfig extends Config{
 	
 	@Key("${environment}.baseUri")
 	String baseUri();
+	
+	@DefaultValue("android")
+	String client();
+	
+	@DefaultValue("IN")
+	String countryCode();
 }
