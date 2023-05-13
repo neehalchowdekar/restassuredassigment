@@ -9,5 +9,7 @@ public final class Route {
 	public static final String TRANSACTIONS = "/transactions";
 	public static final String CONTACT_LENS = "/products/category/contact-lens";
 	public static final String SHADE =  CONTACT_LENS + "/shade";
+	public static final String SEARCH = "/products/search";
+	public static final String TRENDING = "/trending";
 	
 }
