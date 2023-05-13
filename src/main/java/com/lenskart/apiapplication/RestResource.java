@@ -15,10 +15,10 @@ public final class RestResource {
 	private RestResource() {}
 	
 	
-	public static Response post(Object request, String path) {
+	public static Response post(Object payload, String path) {
 
 		return given(SpecBuilder.getRequestSpec())
-				.body(request)
+				.body(payload)
 				.when()
 				.post(path)
 				.then()
@@ -37,7 +37,6 @@ public final class RestResource {
 				.response();
 	}
 	
-	
 	public static Response get(String path, String sessionToken, Map<String, Object> queryparams) {
 		return given(SpecBuilder.getRequestSpec(sessionToken))
 				.queryParams(queryparams)
@@ -49,6 +48,4 @@ public final class RestResource {
 				.response();
 	}
 	
-	
-
 }
